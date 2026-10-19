@@ -1,41 +1,54 @@
-# মান্নানঘাট কেবল নেটওয়ার্ক — ওয়েবসাইট
+# Mannanghat Cable Network — Website
 
-মিনিমাল, দ্রুত লোড হওয়া স্ট্যাটিক ওয়েবসাইট। কোনো ফ্রেমওয়ার্ক নেই — শুধু HTML + CSS + JavaScript।
+Minimal, fast-loading static website in English. No frameworks — just HTML + CSS + JavaScript.
 
-## ফাইল
+## Files
 
-| ফাইল | কাজ |
+| File | Purpose |
 |---|---|
-| `index.html` | পেজের কাঠামো |
-| `styles.css` | ডিজাইন |
-| `config.js` | ⭐ **সব তথ্য এখানে** — ফোন নম্বর, প্যাকেজ, এলাকা, বিকাশ নম্বর, FAQ, নোটিশ |
-| `app.js` | ইন্টারঅ্যাকশন (config থেকে ডেটা নিয়ে পেজ সাজায়) |
+| `index.html` | Homepage |
+| `about.html` | About Us |
+| `privacy.html` | Privacy Policy |
+| `terms.html` | Terms & Conditions |
+| `refund.html` | Return & Refund Policy |
+| `styles.css` | Design (shared by all pages) |
+| `config.js` | ⭐ **All business content here** — phone numbers, packages, payment numbers, FAQs, notices |
+| `app.js` | Interactions (renders homepage content from config.js) |
+| `images/` | Logo + favicons (**uploaded via GitHub web UI, not the connector**) |
 
-## তথ্য বদলানো
+## Changing content
 
-শুধু **`config.js`** খুলে এডিট করুন। যেমন:
+Edit only **`config.js`**. Examples:
 
-- হটলাইন: `hotline: "01XXXXXXXXX"` → আসল নম্বর বসান
-- WhatsApp: `whatsapp: "8801XXXXXXXXX"` → 880 সহ আসল নম্বর (স্পেস ছাড়া)
-- প্যাকেজ: `PACKAGES` লিস্টে নাম/স্পিড/দাম বদলান, `popular: true` দিলে হাইলাইট হবে
-- এলাকা: `COVERAGE_AREAS` লিস্টে এলাকার নাম যোগ/বাদ দিন (লিস্ট খালি থাকলে কভারেজ সেকশন নিজে থেকেই লুকিয়ে থাকবে)
-- বিকাশ/নগদ নম্বর: `PAYMENTS` লিস্টে
-- নোটিশ: `NOTICES` এ নতুন `{ date, text }` লাইন যোগ করুন
+- Hotline: `hotline: "01314773796"` (display format in `hotlineDisplay`)
+- WhatsApp: `whatsapp: "8801314773796"` — country code (880) + number, no spaces
+- Packages: edit the `PACKAGES` list; `popular: true` highlights a card
+- Coverage: add area names to `COVERAGE_AREAS` — the coverage section appears automatically (empty = hidden)
+- Payment numbers: `PAYMENTS` list
+- Notices: add `{ date, text }` lines to `NOTICES`
 
-`"01XXXXXXXXX"` লেখা সব জায়গা ডামি — আসল তথ্য বসিয়ে নিন।
+Leave `facebook: ""` empty to hide the Facebook link.
 
-## নতুন কানেকশন ফর্ম কীভাবে কাজ করে
+## Logo & favicon
 
-সার্ভার নেই, তাই ফর্ম সাবমিট করলে গ্রাহকের তথ্য নিয়ে সরাসরি
-আপনার **WhatsApp-এ** একটি মেসেজ পাঠানোর লিংক খুলে যায়। `config.js`-এর
-`whatsapp` নম্বর ঠিক থাকলেই কাজ করবে।
+The files `images/logo.png`, `images/favicon.png`, `images/apple-touch-icon.png`
+are **binary** — the GitHub connector corrupts binary uploads. Upload them via
+the GitHub web UI: open the repo → `images/` folder → "Add file" → "Upload files"
+→ drag the three PNGs from `mannanghat-logo.zip`.
 
-## GitHub Pages-এ লাইভ করা
+Until uploaded, the site degrades gracefully (logo hides itself, default favicon shows).
 
-1. এই রেপোর **Settings → Pages** এ যান
-2. Source: **Deploy from a branch**, Branch: **main**, Folder: **/ (root)**
-3. Save — কয়েক মিনিটে সাইট লাইভ হবে
+## How the connection form works
 
-## সাইজ
+No server: submitting the form opens WhatsApp with a pre-filled message to the
+number in `config.js` → `whatsapp`.
 
-পুরো সাইট ~30KB — মোবাইল ডেটাতেও ১ সেকেন্ডের মধ্যে লোড হয়।
+## GitHub Pages
+
+Already enabled: Settings → Pages → Deploy from a branch (main, /root).
+Live at https://shamimahmedrobin.github.io/mannanghat-cable-network/
+Every merge to `main` redeploys automatically in ~1–2 minutes.
+
+## Size
+
+Whole site ~60KB (without images) — loads in about a second on mobile data.
