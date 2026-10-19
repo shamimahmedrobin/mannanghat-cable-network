@@ -169,3 +169,16 @@ label.agree a{color:var(--brand);font-weight:600}
 .doc-body a{color:var(--brand)}
 .doc-cta{margin-top:2.2rem;text-align:center;background:var(--bg-alt);border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem}
 .doc-cta p{color:var(--muted);margin-bottom:1rem}
+
+/* ---------- in-site speed test ---------- */
+.speed-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(1.4rem,5vw,2.2rem);box-shadow:var(--shadow);text-align:center;display:grid;gap:1.2rem}
+.speed-num{font-size:clamp(3rem,14vw,4.5rem);font-weight:800;color:var(--brand-dark);line-height:1}
+.speed-unit{color:var(--muted);font-weight:700}
+.speed-phase{color:var(--muted);font-size:.95rem}
+.speed-bar{height:10px;background:#eef3ff;border-radius:999px;overflow:hidden}
+.speed-bar div{height:100%;width:0;background:linear-gradient(90deg,var(--brand),#4d8dff);border-radius:999px;transition:width .2s ease}
+.speed-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
+.speed-grid>div{background:var(--bg-alt);border:1px solid var(--line);border-radius:12px;padding:.9rem .4rem;display:grid;gap:.15rem}
+.speed-grid strong{font-size:1.35rem;color:var(--ink)}
+.speed-grid span{font-size:.8rem;color:var(--muted)}
+#startSpeed:disabled{opacity:.6;cursor:wait}

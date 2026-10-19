@@ -189,8 +189,18 @@
     billBtn.addEventListener("click", function (e) {
       var ok = $("#billAgree").checked, err = $("#billAgreeErr");
       if (!ok) { e.preventDefault(); err.hidden = false; }
-      else { err.hidden = true; }
+      else {
+        err.hidden = true;
+        try { sessionStorage.setItem("mcn_bill_agreed", "1"); } catch (x) {}
+      }
     });
+  }
+
+  /* bill.html is only reachable through the homepage checkbox gate */
+  if (/bill\.html$/.test(location.pathname)) {
+    var agreed = false;
+    try { agreed = sessionStorage.getItem("mcn_bill_agreed") === "1"; } catch (x) {}
+    if (!agreed) location.replace("index.html#payment");
   }
 
   /* ---------- new-connection form → WhatsApp ---------- */
