@@ -25,6 +25,18 @@
 
   $("#year").textContent = new Date().getFullYear();
 
+  /* ---------- Facebook লিংক না থাকলে লুকিয়ে রাখো ---------- */
+  if (!SITE.facebook) {
+    $$("[data-fb-wrap]").forEach(function (el) { el.style.display = "none"; });
+  }
+
+  /* ---------- কভারেজ এলাকা খালি থাকলে সেকশন লুকিয়ে রাখো ---------- */
+  if (!COVERAGE_AREAS.length) {
+    var cov = $("#coverage");
+    if (cov) cov.style.display = "none";
+    $$('a[href="#coverage"]').forEach(function (el) { el.style.display = "none"; });
+  }
+
   /* ---------- প্যাকেজ কার্ড ---------- */
   $("#packageCards").innerHTML = PACKAGES.map(function (p) {
     var feats = p.features.map(function (f) { return "<li>" + f + "</li>"; }).join("");
