@@ -166,7 +166,7 @@ label.agree a{color:var(--brand);font-weight:600}
 .doc-body h2{font-size:1.15rem;text-align:left;margin:1.8rem 0 .5rem;color:var(--brand-dark)}
 .doc-body p{margin-bottom:.9rem;color:#33415c}
 .doc-body ul{margin:.4rem 0 1rem 1.3rem;color:#33415c;display:grid;gap:.4rem}
-.doc-body a{color:var(--brand)}
+.doc-body a:not(.btn){color:var(--brand)}
 .doc-cta{margin-top:2.2rem;text-align:center;background:var(--bg-alt);border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem}
 .doc-cta p{color:var(--muted);margin-bottom:1rem}
 
