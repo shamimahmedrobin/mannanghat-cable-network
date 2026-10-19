@@ -1,0 +1,136 @@
+/* মান্নানঘাট কেবল নেটওয়ার্ক — মিনিমাল, দ্রুত, মোবাইল-ফার্স্ট */
+:root{
+  --bg:#ffffff; --bg-alt:#f4f7ff; --ink:#0f1b2d; --muted:#5b6b82;
+  --brand:#0b5fff; --brand-dark:#0847c2; --wa:#1faa53;
+  --card:#ffffff; --line:#e3e9f5; --radius:14px;
+  --shadow:0 6px 24px rgba(11,95,255,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:system-ui,-apple-system,"Segoe UI","Noto Sans Bengali","Hind Siliguri",sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.1rem}
+.narrow{max-width:680px}
+.center{text-align:center}
+h1{font-size:2rem;line-height:1.35;margin:.6rem 0 .8rem}
+h2{font-size:1.45rem;margin-bottom:.4rem;text-align:center}
+.sec-sub{text-align:center;color:var(--muted);margin-bottom:1.8rem}
+.section{padding:3.2rem 0}
+.section.alt{background:var(--bg-alt)}
+.accent{color:var(--brand)}
+.link{color:var(--brand);font-weight:600}
+.fine{color:var(--muted);font-size:.85rem;text-align:center;margin-top:1.2rem}
+
+/* বাটন */
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.72rem 1.5rem;border-radius:999px;font-weight:700;font-size:1rem;text-decoration:none;border:0;cursor:pointer;transition:transform .12s ease,box-shadow .12s ease}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 8px 20px rgba(11,95,255,.28)}
+.btn-primary:hover{background:var(--brand-dark)}
+.btn-wa{background:#e7f7ee;color:#0d7a38;border:1.5px solid #bfe8cf}
+.btn-wa:hover{background:#d7f2e2}
+.btn-call{background:#eef3ff;color:var(--brand);padding:.55rem 1.1rem;font-size:.95rem}
+.btn-block{width:100%;justify-content:center;margin-top:.4rem}
+
+/* হেডার */
+.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.header-in{display:flex;align-items:center;gap:1rem;height:68px}
+.logo{display:flex;align-items:center;gap:.55rem;text-decoration:none;color:var(--ink);font-weight:800;font-size:1.15rem;margin-right:auto}
+.logo-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--brand),#5b8cff);color:#fff}
+.nav{display:none;gap:1.3rem}
+.nav a{color:var(--muted);text-decoration:none;font-weight:600}
+.nav a:hover{color:var(--brand)}
+@media(min-width:760px){.nav{display:flex}}
+
+/* হিরো */
+.hero{background:radial-gradient(1100px 420px at 50% -80px,#dbe7ff 0%,#fff 62%);padding:4rem 0 3.4rem;text-align:center}
+.eyebrow{display:inline-block;background:#e8efff;color:var(--brand-dark);font-weight:700;font-size:.85rem;padding:.35rem 1rem;border-radius:999px}
+.hero-sub{color:var(--muted);margin-bottom:1.6rem}
+.hero-cta{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.4rem}
+.hero-stats{display:flex;justify-content:center;gap:2.2rem;flex-wrap:wrap}
+.hero-stats div{display:grid;gap:.1rem}
+.hero-stats strong{font-size:1.5rem;color:var(--brand-dark)}
+.hero-stats span{color:var(--muted);font-size:.88rem}
+
+/* নোটিশ */
+.notice{padding:1.4rem 0 0}
+.notice-card{display:flex;gap:.9rem;align-items:flex-start;background:#fffbe8;border:1px solid #f0df9e;border-radius:var(--radius);padding:1rem 1.2rem;box-shadow:var(--shadow)}
+.notice-tag{flex:none;background:#eab308;color:#fff;font-size:.78rem;font-weight:800;padding:.25rem .7rem;border-radius:999px;margin-top:.15rem}
+.notice-card p+p{margin-top:.5rem}
+.notice-date{color:var(--muted);font-size:.82rem;margin-right:.5rem}
+
+/* কার্ড */
+.cards{display:grid;gap:1.1rem;grid-template-columns:1fr}
+@media(min-width:640px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.cards{grid-template-columns:repeat(4,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem 1.4rem;box-shadow:var(--shadow);position:relative;display:flex;flex-direction:column;gap:.35rem}
+.card.popular{border:2px solid var(--brand);transform:translateY(-4px)}
+.pop-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--brand);color:#fff;font-size:.75rem;font-weight:800;padding:.2rem .9rem;border-radius:999px;white-space:nowrap}
+.card .speed{font-size:1.9rem;font-weight:800;color:var(--brand-dark)}
+.card .pname{font-weight:700;font-size:1.05rem}
+.card .price{font-size:1.05rem;color:var(--muted)}
+.card .price b{color:var(--ink);font-size:1.35rem}
+.card ul{list-style:none;margin:.6rem 0 1rem;display:grid;gap:.35rem;font-size:.93rem;color:var(--muted)}
+.card ul li::before{content:"✓";color:var(--wa);font-weight:800;margin-right:.5rem}
+.card .btn{margin-top:auto;justify-content:center;font-size:.92rem;padding:.6rem 1rem}
+
+/* কভারেজ */
+.search-box{max-width:480px;margin:0 auto 1rem}
+.search-box input{width:100%;padding:.85rem 1.2rem;border:2px solid var(--line);border-radius:999px;font-size:1rem;font-family:inherit;outline:none}
+.search-box input:focus{border-color:var(--brand)}
+.area-result{text-align:center;font-weight:700;min-height:1.8em;margin-bottom:.6rem}
+.area-result.ok{color:#0d7a38}
+.area-result.no{color:#b3402e}
+.area-chips{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center}
+.chip{background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:.4rem 1.05rem;font-size:.92rem;font-weight:600;cursor:pointer}
+.chip:hover,.chip.on{border-color:var(--brand);color:var(--brand);background:#eef3ff}
+
+/* ফিচার */
+.feat-grid{display:grid;gap:1.1rem;grid-template-columns:1fr}
+@media(min-width:700px){.feat-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.feat-grid{grid-template-columns:repeat(4,1fr)}}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem 1.3rem;box-shadow:var(--shadow)}
+.feat .ic{width:44px;height:44px;border-radius:13px;background:#e8efff;color:var(--brand);display:grid;place-items:center;margin-bottom:.8rem}
+.feat h3{font-size:1.05rem;margin-bottom:.3rem}
+.feat p{color:var(--muted);font-size:.92rem}
+
+/* পেমেন্ট */
+.pay-cards{grid-template-columns:1fr}
+@media(min-width:700px){.pay-cards{grid-template-columns:repeat(3,1fr)}}
+.pay-num{font-size:1.35rem;font-weight:800;letter-spacing:.5px;color:var(--brand-dark)}
+.pay-note{color:var(--muted);font-size:.88rem}
+.copy-btn{margin-top:.7rem;background:#eef3ff;color:var(--brand);border:0;border-radius:999px;padding:.5rem 1.1rem;font-weight:700;cursor:pointer;font-family:inherit}
+.copy-btn:hover{background:#dfe9ff}
+.steps{max-width:560px;margin:1.8rem auto 0;display:grid;gap:.7rem;list-style:none;counter-reset:st}
+.steps li{counter-increment:st;background:#fff;border:1px solid var(--line);border-radius:12px;padding:.85rem 1.1rem .85rem 3.2rem;position:relative;font-size:.95rem}
+.steps li::before{content:counter(st);position:absolute;left:1rem;top:50%;transform:translateY(-50%);width:1.7rem;height:1.7rem;border-radius:50%;background:var(--brand);color:#fff;font-weight:800;display:grid;place-items:center;font-size:.9rem}
+
+/* ফর্ম */
+.cta-band{background:linear-gradient(135deg,#0b5fff,#0847c2);color:#fff}
+.cta-band .sec-sub{color:#dbe7ff}
+.form{display:grid;gap:1rem;background:#fff;border-radius:18px;padding:1.6rem;box-shadow:0 14px 40px rgba(0,0,0,.22);color:var(--ink)}
+.form label{display:grid;gap:.35rem;font-weight:700;font-size:.92rem}
+.form input,.form select{padding:.8rem 1rem;border:2px solid var(--line);border-radius:12px;font-size:1rem;font-family:inherit;width:100%;outline:none}
+.form input:focus,.form select:focus{border-color:var(--brand)}
+.form-err{color:#b3402e;font-weight:700;font-size:.9rem;text-align:center}
+
+/* FAQ */
+.faq-list{display:grid;gap:.7rem}
+.faq{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.faq button{width:100%;background:none;border:0;padding:1rem 1.2rem;font-family:inherit;font-size:1rem;font-weight:700;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;color:var(--ink)}
+.faq button .pm{flex:none;color:var(--brand);font-size:1.3rem;line-height:1}
+.faq .ans{max-height:0;overflow:hidden;transition:max-height .25s ease;color:var(--muted);font-size:.95rem}
+.faq .ans p{padding:0 1.2rem 1.1rem}
+.faq.open .ans{max-height:300px}
+
+/* ফুটার */
+.footer{background:#0c1526;color:#c6d2e6;padding:2.6rem 0 1.2rem;margin-top:0}
+.foot-grid{display:grid;gap:1.6rem;grid-template-columns:1fr}
+@media(min-width:700px){.foot-grid{grid-template-columns:2fr 1fr 1fr}}
+.foot-brand{color:#fff;font-weight:800;font-size:1.1rem;margin-bottom:.4rem}
+.foot-head{color:#fff;font-weight:700;margin-bottom:.4rem}
+.footer a{color:#9db9e8;text-decoration:none}
+.footer a:hover{color:#fff}
+.copy{text-align:center;color:#7c8ea9;font-size:.85rem;margin-top:2rem;padding-top:1.2rem;border-top:1px solid #1c2a44}
+
+/* ভাসমান WhatsApp */
+.wa-float{position:fixed;right:1.1rem;bottom:1.1rem;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 26px rgba(37,211,102,.45);z-index:60}
+.wa-float:hover{transform:scale(1.06)}
