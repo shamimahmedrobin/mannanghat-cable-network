@@ -1,77 +1,77 @@
 /* =====================================================================
-   মান্নানঘাট কেবল নেটওয়ার্ক — ওয়েবসাইটের সব তথ্য
+   MANNANGHAT CABLE NETWORK — all website content lives here
    ---------------------------------------------------------------------
-   সাইটে যা কিছু দেখা যায় (ফোন নম্বর, প্যাকেজ, এলাকা, বিকাশ নম্বর...)
-   সব এখান থেকে আসে। কিছু বদলাতে হলে শুধু এই ফাইলটা এডিট করুন,
-   অন্য কোনো ফাইলে হাত দিতে হবে না।
+   Everything visible on the site (phone numbers, packages, areas,
+   payment numbers, FAQs, notices) comes from this file. To change
+   anything, edit ONLY this file — no other file needs touching.
 
-   ⚠️  ফাঁকা ("") রাখা জায়গা (যেমন facebook) সাইটে দেখাবে না।
+   Leave a value empty ("") to hide that item (e.g. facebook).
    ===================================================================== */
 
 const SITE = {
-  brand: "মান্নানঘাট কেবল নেটওয়ার্ক",
-  brandShort: "মান্নানঘাট",
-  tagline: "নির্ভরযোগ্য ফাইবার ইন্টারনেট, আপনার দোরগোড়ায়",
-  heroTitle: "বাফারিং ছাড়া ইন্টারনেট,",
-  heroTitleAccent: "প্রতিদিন, প্রতিমুহূর্তে।",
-  heroSub: "পিওর ফাইবার অপটিক কানেকশন • আনলিমিটেড ডেটা • ২৪/৭ সাপোর্ট",
+  brand: "Mannanghat Cable Network",
+  brandShort: "Mannanghat",
+  tagline: "Reliable fiber internet, right at your doorstep",
+  heroTitle: "Buffer-free internet,",
+  heroTitleAccent: "every day, every moment.",
+  heroSub: "Pure fiber-optic connection • Unlimited data • 24/7 support",
 
-  // ---- যোগাযোগ ----
+  // ---- Contact ----
   hotline: "01314773796",
   hotlineDisplay: "01314-773796",
-  whatsapp: "8801314773796", // wa.me এর জন্য কান্ট্রি কোড (880) সহ, স্পেস ছাড়া
-  facebook: "", // ফাঁকা রাখলে সাইটে Facebook লিংক দেখাবে না
-  address: "সংবাদপুর বাজার (মান্নানঘাট), জামালগঞ্জ, সুনামগঞ্জ",
-  hours: "প্রতিদিন সকাল ৯টা – রাত ১০টা",
-  statSpeed: "60 Mbps", // হিরো সেকশনের "পর্যন্ত স্পিড" সংখ্যা
+  whatsapp: "8801314773796", // for wa.me links: country code (880) + number, no spaces
+  facebook: "", // empty = Facebook link hidden
+  address: "Songbadpur Bazar (Mannanghat), Jamalganj, Sunamganj",
+  hours: "Open daily, 9 AM – 10 PM",
+  statSpeed: "60 Mbps",
 
-  // ---- স্পিড টেস্ট বাটনের লিংক ----
+  // ---- Speed test button link ----
   speedTestUrl: "https://www.speedtest.net/",
 };
 
-/* ------------------------- প্যাকেজ ------------------------- */
-// price: মাসিক চার্জ (টাকা)। popular: true হলে কার্ডটা হাইলাইট হবে।
+/* ------------------------- Packages ------------------------- */
+// price: monthly charge (Tk). popular: true highlights the card.
 const PACKAGES = [
-  { name: "বেসিক",    speed: "20 Mbps",  price: 500,  popular: false, features: ["আনলিমিটেড ডেটা", "HD ভিডিও স্ট্রিমিং", "ফ্রি ইনস্টলেশন সাপোর্ট"] },
-  { name: "স্ট্যান্ডার্ড", speed: "30 Mbps", price: 600, popular: true, features: ["আনলিমিটেড ডেটা", "4K স্ট্রিমিং", "অনলাইন গেমিং ফ্রেন্ডলি", "ফ্রি ইনস্টলেশন সাপোর্ট"] },
-  { name: "প্রিমিয়াম",  speed: "40 Mbps",  price: 700, popular: false, features: ["আনলিমিটেড ডেটা", "4K স্ট্রিমিং", "গেমিং + ফ্রিল্যান্সিং", "প্রায়োরিটি সাপোর্ট"] },
-  { name: "আলট্রা",    speed: "60 Mbps",  price: 800, popular: false, features: ["আনলিমিটেড ডেটা", "হেভি ইউজার/অফিস", "প্রায়োরিটি সাপোর্ট", "ডেডিকেটেড লাইন সুবিধা"] },
+  { name: "Basic",    speed: "20 Mbps",  price: 500,  popular: false, features: ["Unlimited data", "HD video streaming", "Free installation support"] },
+  { name: "Standard", speed: "30 Mbps",  price: 600,  popular: true,  features: ["Unlimited data", "4K streaming", "Online-gaming friendly", "Free installation support"] },
+  { name: "Premium",  speed: "40 Mbps",  price: 700,  popular: false, features: ["Unlimited data", "4K streaming", "Gaming + freelancing", "Priority support"] },
+  { name: "Ultra",    speed: "60 Mbps",  price: 800,  popular: false, features: ["Unlimited data", "Heavy users / office", "Priority support", "Dedicated line facility"] },
 ];
 
-/* ------------------------- কভারেজ এলাকা ------------------------- */
-// আপাতত খালি — এলাকার লিস্ট দিলে এখানে যোগ করলেই কভারেজ সেকশন আবার দেখা যাবে।
+/* ------------------------- Coverage areas ------------------------- */
+// Empty for now — add area names and the coverage section reappears automatically.
 const COVERAGE_AREAS = [];
 
-/* ------------------------- বিল পেমেন্ট ------------------------- */
+/* ------------------------- Bill payment ------------------------- */
 const PAYMENTS = [
-  { method: "বিকাশ",  number: "01314773796", note: "মার্চেন্ট নম্বর — পেমেন্ট করুন" },
+  { method: "bKash",  number: "01314773796", note: "Merchant number — make payment" },
 ];
 const PAYMENT_STEPS = [
-  "উপরের bKash মার্চেন্ট নম্বরে আপনার মাসিক বিলের টাকা পেমেন্ট করুন",
-  "TrxID টি সংরক্ষণ করুন",
-  "হটলাইনে কল করে বা WhatsApp-এ TrxID পাঠিয়ে কনফার্ম করুন",
+  "Pay your monthly bill to the bKash merchant number above",
+  "Save the TrxID",
+  "Call the hotline or send the TrxID on WhatsApp to confirm",
 ];
 
-/* ------------------------- কেন আমরা ------------------------- */
+/* ------------------------- Why us ------------------------- */
 const FEATURES = [
-  { title: "পিওর ফাইবার", desc: "বাসা পর্যন্ত ফাইবার অপটিক লাইন — স্থিতিশীল স্পিড, বৃষ্টিতেও ডিসকানেক্ট নয়।" },
-  { title: "আনলিমিটেড ডেটা", desc: "কোনো FUP বা ডেটা ক্যাপ নেই। যত খুশি ব্যবহার করুন, স্পিড কমবে না।" },
-  { title: "২৪/৭ সাপোর্ট", desc: "যেকোনো সমস্যায় হটলাইন বা WhatsApp — দ্রুত সমাধানের নিশ্চয়তা।" },
-  { title: "সহজ বিল পেমেন্ট", desc: "বিকাশ, নগদ, রকেটে ঘরে বসেই বিল দিন। কোনো লাইনে দাঁড়াতে হবে না।" },
+  { title: "Pure Fiber", desc: "Fiber-optic line to your home — stable speeds, no disconnections in the rain." },
+  { title: "Unlimited Data", desc: "No FUP or data caps. Use as much as you like; speed never drops." },
+  { title: "24/7 Support", desc: "Hotline or WhatsApp for any issue — fast resolution, guaranteed." },
+  { title: "Easy Bill Payment", desc: "Pay from home via bKash. No queues, no hassle." },
 ];
 
-/* ------------------------- জিজ্ঞাসা (FAQ) ------------------------- */
+/* ------------------------- FAQ ------------------------- */
 const FAQS = [
-  { q: "নতুন কানেকশন নিতে কী কী লাগবে?", a: "শুধু আপনার নাম, মোবাইল নম্বর আর ঠিকানা। উপরের 'নতুন কানেকশন' ফর্মটি পূরণ করুন — আমাদের টিম ২৪ ঘণ্টার মধ্যে যোগাযোগ করবে।" },
-  { q: "ইনস্টলেশন চার্জ কত?", a: "ইনস্টলেশন চার্জ এলাকা ও প্যাকেজভেদে ভিন্ন হতে পারে। ফর্ম পূরণ করলে আমাদের টিম আপনার এলাকা অনুযায়ী সঠিক তথ্য জানিয়ে দেবে।" },
-  { q: "রাউটার কি আপনারা দেবেন?", a: "আপনি চাইলে আমাদের কাছ থেকে রাউটার নিতে পারেন, অথবা নিজের রাউটারও ব্যবহার করতে পারেন।" },
-  { q: "স্পিড কি সবসময় একই থাকবে?", a: "আমরা কোনো থ্রটলিং করি না। তবে একই লাইনে অনেক ডিভাইস একসাথে ভারী ব্যবহার করলে ব্যক্তিগত অভিজ্ঞতা ভিন্ন হতে পারে।" },
-  { q: "বিল কীভাবে দেব?", a: "বিকাশ, নগদ বা রকেটে সেন্ড মানি করে বিল দিতে পারবেন। পেমেন্ট সেকশনে নম্বর ও নিয়ম দেওয়া আছে।" },
-  { q: "লাইন ডাউন হলে কী করব?", a: "সরাসরি হটলাইনে কল করুন বা WhatsApp-এ মেসেজ দিন। আমাদের টেকনিশিয়ান দ্রুত ব্যবস্থা নেবে।" },
+  { q: "What do I need for a new connection?", a: "Just your name, mobile number and address. Fill in the 'Get Connected' form — our team will contact you within 24 hours." },
+  { q: "How much is the installation charge?", a: "Installation charges vary by area and package. Submit the form and our team will confirm the exact amount for your area." },
+  { q: "Do you provide a router?", a: "You can get a router from us, or use your own." },
+  { q: "Will the speed stay consistent?", a: "We never throttle speeds. However, your experience may vary if many devices use heavy bandwidth on the same line at once." },
+  { q: "How do I pay my bill?", a: "Pay via bKash to our merchant number. The number and steps are in the Bill Payment section." },
+  { q: "What should I do if the line goes down?", a: "Call the hotline directly or message us on WhatsApp. Our technicians will act quickly." },
 ];
 
-/* ------------------------- নোটিশ বোর্ড ------------------------- */
-// নতুন নোটিশ দিতে নিচে { date, text } ফরম্যাটে লাইন যোগ করুন। খালি রাখলে সেকশনটি দেখাবে না।
+/* ------------------------- Notice board ------------------------- */
+// Add { date, text } lines for new notices. Empty = section hidden.
 const NOTICES = [
-  { date: "১৯ অক্টোবর", text: "স্বাগতম! আমাদের নতুন ওয়েবসাইট চালু হয়েছে। যেকোনো মতামত হটলাইনে জানান।" },
+  { date: "Oct 19", text: "Welcome! Our new website is live. Share any feedback on the hotline." },
 ];
