@@ -27,20 +27,32 @@ h2{font-size:clamp(1.25rem,3.6vw,1.5rem);margin-bottom:.4rem;text-align:center}
 .btn-primary:hover{background:var(--brand-dark)}
 .btn-wa{background:#e7f7ee;color:#0d7a38;border:1.5px solid #bfe8cf}
 .btn-wa:hover{background:#d7f2e2}
-.btn-call{background:#eef3ff;color:var(--brand);padding:.55rem 1.1rem;font-size:.95rem;white-space:nowrap}
 .btn-block{width:100%;justify-content:center;margin-top:.4rem}
 
 /* header */
 .header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .header-in{display:flex;align-items:center;gap:.8rem;height:68px}
-.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink);font-weight:800;font-size:1.15rem;margin-right:auto;min-width:0}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink);font-weight:800;font-size:1.15rem;min-width:0}
 .logo-text{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.logo-textwrap{display:flex;flex-direction:column;line-height:1.2;min-width:0}
+.logo-sub{font-size:.66rem;font-weight:700;color:var(--muted);letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
 .logo-img{width:42px;height:42px;border-radius:50%;object-fit:cover;flex:none;background:#fff}
 .logo-img.sm{width:30px;height:30px;vertical-align:-7px;margin-right:.3rem}
-.nav{display:none;gap:1.3rem}
-.nav a{color:var(--muted);text-decoration:none;font-weight:600}
-.nav a:hover{color:var(--brand)}
-@media(min-width:760px){.nav{display:flex}}
+/* header actions: call icon + hamburger */
+.header-actions{margin-left:auto;display:flex;align-items:center;gap:.6rem}
+.icon-btn{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:0;cursor:pointer;text-decoration:none;transition:transform .12s ease,background .12s ease;font-family:inherit;flex:none}
+.icon-btn:active{transform:scale(.94)}
+.icon-btn.call{background:var(--brand);color:#fff;box-shadow:0 6px 16px rgba(11,95,255,.32)}
+.icon-btn.call:hover{background:var(--brand-dark)}
+.icon-btn.menu{background:#eef3ff;color:var(--brand)}
+.icon-btn.menu:hover{background:#dbe7ff}
+#menuBtn .ic-x{display:none}
+#menuBtn.open .ic-x{display:block}
+#menuBtn.open .ic-bars{display:none}
+/* dropdown drawer */
+.drawer{position:absolute;top:calc(100% + 6px);right:1rem;min-width:240px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 18px 44px rgba(15,27,45,.16);padding:.5rem;z-index:70}
+.drawer a{display:block;padding:.72rem 1rem;border-radius:10px;color:var(--ink);text-decoration:none;font-weight:600}
+.drawer a:hover{background:#eef3ff;color:var(--brand)}
 
 /* hero */
 .hero{background:radial-gradient(1100px 420px at 50% -80px,#dbe7ff 0%,#fff 62%);padding:clamp(2.6rem,8vw,4rem) 0 clamp(2.4rem,7vw,3.4rem);text-align:center}
@@ -113,9 +125,13 @@ h2{font-size:clamp(1.25rem,3.6vw,1.5rem);margin-bottom:.4rem;text-align:center}
 .form input,.form select{padding:.8rem 1rem;border:2px solid var(--line);border-radius:12px;font-size:1rem;font-family:inherit;width:100%;outline:none;background:#fff;color:var(--ink)}
 .form input:focus,.form select:focus{border-color:var(--brand)}
 .form-err{color:#b3402e;font-weight:700;font-size:.9rem;text-align:center}
-.agree{display:flex;gap:.65rem;align-items:flex-start;font-weight:400;font-size:.88rem;line-height:1.55;cursor:pointer}
-.agree input{width:18px;height:18px;flex:none;margin-top:.2rem;accent-color:var(--brand);cursor:pointer}
-.agree a{color:var(--brand);font-weight:600}
+/* policy agreement checkbox: box inline before the text */
+label.agree{display:flex;gap:.65rem;align-items:flex-start;font-weight:400;font-size:.88rem;line-height:1.55;cursor:pointer;text-align:left}
+label.agree input{width:18px;height:18px;flex:none;margin-top:.22rem;accent-color:var(--brand);cursor:pointer;padding:0;border:0;background:none}
+label.agree a{color:var(--brand);font-weight:600}
+
+/* bill payment gate card */
+.bill-gate{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.2rem,4vw,1.6rem);box-shadow:var(--shadow);display:grid;gap:1rem}
 
 /* faq */
 .faq-list{display:grid;gap:.7rem}

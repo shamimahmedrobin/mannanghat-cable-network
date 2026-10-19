@@ -38,6 +38,30 @@
     $$('a[href="#coverage"]').forEach(function (el) { el.style.display = "none"; });
   }
 
+  /* ---------- hamburger menu ---------- */
+  var menuBtn = $("#menuBtn"), drawer = $("#siteMenu");
+  if (menuBtn && drawer) {
+    var setMenu = function (open) {
+      drawer.hidden = !open;
+      menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      menuBtn.classList.toggle("open", open);
+    };
+    menuBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      setMenu(drawer.hidden);
+    });
+    drawer.addEventListener("click", function (e) {
+      if (e.target.closest("a")) setMenu(false);
+    });
+    document.addEventListener("click", function (e) {
+      if (!drawer.hidden && !e.target.closest("#siteMenu") && !e.target.closest("#menuBtn")) setMenu(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !drawer.hidden) setMenu(false);
+    });
+  }
+
   /* ---------- package cards ---------- */
   var pc = $("#packageCards");
   if (pc) {
@@ -157,6 +181,16 @@
     $("#noticeList").innerHTML = NOTICES.map(function (n) {
       return "<p><span class='notice-date'>" + n.date + "</span>" + n.text + "</p>";
     }).join("");
+  }
+
+  /* ---------- bill gate: checkbox required before opening bill page ---------- */
+  var billBtn = $("#processBillBtn");
+  if (billBtn) {
+    billBtn.addEventListener("click", function (e) {
+      var ok = $("#billAgree").checked, err = $("#billAgreeErr");
+      if (!ok) { e.preventDefault(); err.hidden = false; }
+      else { err.hidden = true; }
+    });
   }
 
   /* ---------- new-connection form → WhatsApp ---------- */
