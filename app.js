@@ -61,7 +61,7 @@
       if (e.key === "Escape" && !drawer.hidden) setMenu(false);
     });
     window.addEventListener("resize", function () {
-      if (window.innerWidth >= 1000 && !drawer.hidden) setMenu(false);
+      if (window.innerWidth >= 920 && !drawer.hidden) setMenu(false);
     });
   }
 
