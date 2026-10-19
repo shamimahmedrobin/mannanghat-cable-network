@@ -159,6 +159,16 @@
     }).join("");
   }
 
+  /* ---------- bill gate: checkbox required before opening bill page ---------- */
+  var billBtn = $("#processBillBtn");
+  if (billBtn) {
+    billBtn.addEventListener("click", function (e) {
+      var ok = $("#billAgree").checked, err = $("#billAgreeErr");
+      if (!ok) { e.preventDefault(); err.hidden = false; }
+      else { err.hidden = true; }
+    });
+  }
+
   /* ---------- new-connection form → WhatsApp ---------- */
   var form = $("#connForm");
   if (form) {

@@ -19,7 +19,7 @@
   <div class="wrap header-in">
     <a class="logo" href="index.html" aria-label="Home">
       <img class="logo-img" src="images/logo.png" alt="Mannanghat Cable Network logo" onerror="this.remove()">
-      <span class="logo-text" data-cfg="brandShort">Mannanghat</span>
+      <span class="logo-textwrap"><span class="logo-text" data-cfg="brandShort">Mannanghat</span><span class="logo-sub" data-cfg="brandSub">Cable Network</span></span>
     </a>
     <nav class="nav" aria-label="Main menu">
       <a href="#packages">Packages</a>
@@ -97,11 +97,14 @@
 
 <!-- ================= Bill payment ================= -->
 <section class="section alt" id="payment">
-  <div class="wrap">
+  <div class="wrap narrow">
     <h2>Bill Payment</h2>
     <p class="sec-sub">Pay from home via bKash</p>
-    <div class="cards pay-cards" id="payCards"></div>
-    <ol class="steps" id="paySteps"></ol>
+    <div class="bill-gate">
+      <label class="agree"><input type="checkbox" id="billAgree"> <span>I agree to the <a href="terms.html" target="_blank" rel="noopener">Terms &amp; Conditions</a>, <a href="refund.html" target="_blank" rel="noopener">Return &amp; Refund Policy</a> and <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>
+      <p class="form-err" id="billAgreeErr" role="alert" hidden>Please accept the Terms &amp; Conditions, Return &amp; Refund Policy and Privacy Policy to continue.</p>
+      <a class="btn btn-primary btn-block" id="processBillBtn" href="bill.html">Process Bill</a>
+    </div>
   </div>
 </section>
 
@@ -159,6 +162,7 @@
     <div>
       <p class="foot-head">Quick Links</p>
       <p><a href="#packages">Packages</a></p>
+      <p><a href="bill.html">Bill Payment</a></p>
       <p><a href="#new-connection">New Connection</a></p>
       <p><a href="#faq">FAQ</a></p>
       <p><a data-cfg-href="ext:speedTestUrl" href="https://www.speedtest.net/" target="_blank" rel="noopener">Speed Test</a></p>
