@@ -48,8 +48,8 @@ const PAYMENTS = [
 ];
 const PAYMENT_STEPS = [
   "Pay your monthly bill to the bKash merchant number above",
-  "Save the TrxID",
-  "Call the hotline or send the TrxID on WhatsApp to confirm",
+  "Enter your customer ID as reference.",
+  "Contact Helpline if you forget to provide reference ID.",
 ];
 
 /* ------------------------- Why us ------------------------- */
