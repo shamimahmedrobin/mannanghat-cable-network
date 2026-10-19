@@ -11,6 +11,7 @@
 const SITE = {
   brand: "Mannanghat Cable Network",
   brandShort: "Mannanghat",
+  brandSub: "Cable Network",
   tagline: "Reliable fiber internet, right at your doorstep",
   heroTitle: "Buffer-free internet,",
   heroTitleAccent: "every day, every moment.",
