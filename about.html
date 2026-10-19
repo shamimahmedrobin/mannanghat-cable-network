@@ -15,18 +15,27 @@
   <div class="wrap header-in">
     <a class="logo" href="index.html" aria-label="Home">
       <img class="logo-img" src="images/logo.png" alt="Mannanghat Cable Network logo" onerror="this.remove()">
-      <span class="logo-text">Mannanghat</span>
+      <span class="logo-textwrap"><span class="logo-text">Mannanghat</span><span class="logo-sub">Cable Network</span></span>
     </a>
-    <nav class="nav" aria-label="Main menu">
-      <a href="index.html#packages">Packages</a>
-      <a href="index.html#payment">Bill Payment</a>
-      <a href="index.html#faq">FAQ</a>
-    </nav>
-    <a class="btn btn-call" href="tel:01314773796">
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
-      01314-773796
-    </a>
+    <div class="header-actions">
+      <a class="icon-btn call" href="tel:01314773796" aria-label="Call hotline">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+      </a>
+      <button class="icon-btn menu" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteMenu">
+        <svg class="ic-bars" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="ic-x" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
   </div>
+  <nav class="drawer" id="siteMenu" aria-label="Site menu" hidden>
+    <a href="index.html#packages">Packages</a>
+    <a href="index.html#why">Why Mannanghat</a>
+    <a href="bill.html">Bill Payment</a>
+    <a href="index.html#new-connection">New Connection</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="https://www.speedtest.net/" target="_blank" rel="noopener">Speed Test</a>
+    <a href="about.html">About</a>
+  </nav>
 </header>
 
 <main>
@@ -82,6 +91,7 @@
       <p class="foot-head">Quick Links</p>
       <p><a href="index.html">Home</a></p>
       <p><a href="index.html#packages">Packages</a></p>
+      <p><a href="bill.html">Bill Payment</a></p>
       <p><a href="index.html#new-connection">New Connection</a></p>
       <p><a href="index.html#faq">FAQ</a></p>
     </div>
@@ -96,6 +106,7 @@
   </div>
   <p class="copy">© <span id="year"></span> Mannanghat Cable Network — All rights reserved</p>
 </footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="config.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

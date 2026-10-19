@@ -11,6 +11,7 @@
 const SITE = {
   brand: "Mannanghat Cable Network",
   brandShort: "Mannanghat",
+  brandSub: "Cable Network",
   tagline: "Reliable fiber internet, right at your doorstep",
   heroTitle: "Buffer-free internet,",
   heroTitleAccent: "every day, every moment.",
@@ -71,7 +72,5 @@ const FAQS = [
 ];
 
 /* ------------------------- Notice board ------------------------- */
-// Add { date, text } lines for new notices. Empty = section hidden.
-const NOTICES = [
-  { date: "Oct 19", text: "Welcome! Our new website is live. Share any feedback on the hotline." },
-];
+// Empty — notices removed for now. Add { date, text } lines to show the board again.
+const NOTICES = [];
