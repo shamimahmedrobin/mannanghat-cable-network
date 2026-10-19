@@ -27,7 +27,6 @@ const SITE = {
   statSpeed: "60 Mbps",
 
   // ---- Speed test button link ----
-  speedTestUrl: "https://www.speedtest.net/",
 };
 
 /* ------------------------- Packages ------------------------- */
