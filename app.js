@@ -47,10 +47,10 @@
         (p.popular ? '<span class="pop-badge">Most Popular</span>' : "") +
         '<p class="pname">' + p.name + '</p>' +
         '<p class="speed">' + p.speed + '</p>' +
-        '<p class="price"><b>Tk ' + p.price + '</b> /month</p>' +
+        '<p class="price"><b>BDT ' + p.price + '</b> /month</p>' +
         "<ul>" + feats + "</ul>" +
         '<a class="btn btn-primary" target="_blank" rel="noopener" href="' +
-        waLink("Hello, I would like the " + p.name + " package (" + p.speed + ", Tk " + p.price + "/month).") +
+        waLink("Hello, I would like the " + p.name + " package (" + p.speed + ", BDT " + p.price + "/month).") +
         '">Choose This Plan</a></div>';
     }).join("");
   }
@@ -59,7 +59,7 @@
   var fp = $("#fPack");
   if (fp) {
     fp.innerHTML = PACKAGES.map(function (p) {
-      return '<option value="' + p.name + " (" + p.speed + ")" + '">' + p.name + " — " + p.speed + " (Tk " + p.price + ")</option>";
+      return '<option value="' + p.name + " (" + p.speed + ")" + '">' + p.name + " — " + p.speed + " (BDT " + p.price + ")</option>";
     }).join("");
   }
 
@@ -168,9 +168,12 @@
           phone = $("#fPhone").value.trim(),
           addr = $("#fAddr").value.trim(),
           pack = $("#fPack").value,
-          err = $("#formErr");
+          agreed = $("#fAgree").checked,
+          err = $("#formErr"), aerr = $("#agreeErr");
       if (!name || !/^01\d{9}$/.test(phone) || !addr) { err.hidden = false; return; }
       err.hidden = true;
+      if (!agreed) { aerr.hidden = false; return; }
+      aerr.hidden = true;
       var msg = "Hello, I would like a new connection.\n\nName: " + name + "\nMobile: " + phone + "\nAddress: " + addr + "\nPackage: " + pack;
       window.open(waLink(msg), "_blank", "noopener");
     });
