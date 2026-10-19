@@ -17,10 +17,19 @@
 <!-- ================= Header ================= -->
 <header class="header">
   <div class="wrap header-in">
-    <a class="logo" href="index.html" aria-label="Home">
+    <a class="logo" href="./" aria-label="Home">
       <img class="logo-img" src="images/logo.png" alt="Mannanghat Cable Network logo" onerror="this.remove()">
       <span class="logo-textwrap"><span class="logo-text" data-cfg="brandShort">Mannanghat</span><span class="logo-sub" data-cfg="brandSub">Cable Network</span></span>
     </a>
+    <nav class="nav" aria-label="Main menu">
+      <a href="#packages">Packages</a>
+      <a href="#why">Why us</a>
+      <a href="#payment">Bill Payment</a>
+      <a href="#new-connection">New Connection</a>
+      <a href="#faq">FAQ</a>
+      <a href="speed/">Speed Test</a>
+      <a href="about/">About</a>
+    </nav>
     <div class="header-actions">
       <a class="icon-btn call" href="tel:01314773796" data-cfg-href="tel:hotline" aria-label="Call hotline">
         <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
@@ -33,12 +42,12 @@
   </div>
   <nav class="drawer" id="siteMenu" aria-label="Site menu" hidden>
     <a href="#packages">Packages</a>
-    <a href="#why">Why Mannanghat</a>
+    <a href="#why">Why us</a>
     <a href="#payment">Bill Payment</a>
     <a href="#new-connection">New Connection</a>
     <a href="#faq">FAQ</a>
-    <a href="speed.html">Speed Test</a>
-    <a href="about.html">About</a>
+    <a href="speed/">Speed Test</a>
+    <a href="about/">About</a>
   </nav>
 </header>
 
@@ -110,9 +119,9 @@
     <h2>Bill Payment</h2>
     <p class="sec-sub">Pay from home via bKash</p>
     <div class="bill-gate">
-      <label class="agree"><input type="checkbox" id="billAgree"> <span>I agree to the <a href="terms.html" target="_blank" rel="noopener">Terms &amp; Conditions</a>, <a href="refund.html" target="_blank" rel="noopener">Return &amp; Refund Policy</a> and <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>
+      <label class="agree"><input type="checkbox" id="billAgree"> <span>I agree to the <a href="terms/">Terms &amp; Conditions</a>, <a href="refund/">Return &amp; Refund Policy</a> and <a href="privacy/">Privacy Policy</a>.</span></label>
       <p class="form-err" id="billAgreeErr" role="alert" hidden>Please accept the Terms &amp; Conditions, Return &amp; Refund Policy and Privacy Policy to continue.</p>
-      <a class="btn btn-primary btn-block" id="processBillBtn" href="bill.html">Process Bill</a>
+      <a class="btn btn-primary btn-block" id="processBillBtn" href="bill/">Process Bill</a>
     </div>
   </div>
 </section>
@@ -127,7 +136,7 @@
       <label>Mobile number<input type="tel" id="fPhone" placeholder="01XXXXXXXXX" pattern="01[0-9]{9}" required></label>
       <label>Address / Area<input type="text" id="fAddr" placeholder="House/holding, area" required></label>
       <label>Preferred package<select id="fPack"></select></label>
-      <label class="agree"><input type="checkbox" id="fAgree"> <span>I agree to the <a href="terms.html" target="_blank" rel="noopener">Terms &amp; Conditions</a>, <a href="refund.html" target="_blank" rel="noopener">Return &amp; Refund Policy</a> and <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>
+      <label class="agree"><input type="checkbox" id="fAgree"> <span>I agree to the <a href="terms/">Terms &amp; Conditions</a>, <a href="refund/">Return &amp; Refund Policy</a> and <a href="privacy/">Privacy Policy</a>.</span></label>
       <button type="submit" class="btn btn-primary btn-block">Send via WhatsApp</button>
       <p class="form-err" id="formErr" role="alert" hidden>Please enter your name, a valid mobile number and address.</p>
       <p class="form-err" id="agreeErr" role="alert" hidden>Please accept the Terms &amp; Conditions, Return &amp; Refund Policy and Privacy Policy to continue.</p>
@@ -148,7 +157,7 @@
   <div class="wrap center">
     <h2>Test Your Speed</h2>
     <p class="sec-sub">Check your current internet speed in one click</p>
-    <a class="btn btn-primary" href="speed.html">Start Speed Test</a>
+    <a class="btn btn-primary" href="speed/">Start Speed Test</a>
   </div>
 </section>
 
@@ -174,19 +183,21 @@
       <p><a href="#payment">Bill Payment</a></p>
       <p><a href="#new-connection">New Connection</a></p>
       <p><a href="#faq">FAQ</a></p>
-      <p><a href="speed.html">Speed Test</a></p>
+      <p><a href="speed/">Speed Test</a></p>
     </div>
     <div>
       <p class="foot-head">Company</p>
-      <p><a href="about.html">About Us</a></p>
-      <p><a href="privacy.html">Privacy Policy</a></p>
-      <p><a href="terms.html">Terms &amp; Conditions</a></p>
-      <p><a href="refund.html">Return &amp; Refund Policy</a></p>
-      <p><a href="delivery.html">Delivery Policy</a></p>
+      <p><a href="about/">About Us</a></p>
+      <p><a href="privacy/">Privacy Policy</a></p>
+      <p><a href="terms/">Terms &amp; Conditions</a></p>
+      <p><a href="refund/">Return &amp; Refund Policy</a></p>
+      <p><a href="delivery/">Delivery Policy</a></p>
     </div>
   </div>
+  <div class="foot-bottom">
   <p class="copy">© <span id="year"></span> <span data-cfg="brand">Mannanghat Cable Network</span> — All rights reserved</p>
   <p class="credit">Developed by <a href="https://shamimahmedrobin.vercel.app/" target="_blank" rel="noopener">Shamim Ahmed Robin</a></p>
+  </div>
 </footer>
 
 <!-- Floating WhatsApp button -->

@@ -60,6 +60,9 @@
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && !drawer.hidden) setMenu(false);
     });
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 1000 && !drawer.hidden) setMenu(false);
+    });
   }
 
   /* ---------- package cards ---------- */
@@ -197,10 +200,10 @@
   }
 
   /* bill.html is only reachable through the homepage checkbox gate */
-  if (/bill\.html$/.test(location.pathname)) {
+  if (/\/bill(\/|\/index\.html)?$/.test(location.pathname)) {
     var agreed = false;
     try { agreed = sessionStorage.getItem("mcn_bill_agreed") === "1"; } catch (x) {}
-    if (!agreed) location.replace("index.html#payment");
+    if (!agreed) location.replace("../#payment");
   }
 
   /* ---------- new-connection form → WhatsApp ---------- */
