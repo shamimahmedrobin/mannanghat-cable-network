@@ -186,6 +186,11 @@
     }).join("");
   }
 
+  /* ---------- policy links inside agreement labels: follow link without toggling checkbox ---------- */
+  $$("label.agree a").forEach(function (a) {
+    a.addEventListener("click", function (e) { e.stopPropagation(); });
+  });
+
   /* ---------- bill gate: checkbox required before opening bill page ---------- */
   var billBtn = $("#processBillBtn");
   if (billBtn) {
