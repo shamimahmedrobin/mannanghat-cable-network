@@ -52,3 +52,9 @@ Every merge to `main` redeploys automatically in ~1–2 minutes.
 ## Size
 
 Whole site ~60KB (without images) — loads in about a second on mobile data.
+
+## Cache-busting
+
+CSS/JS links carry a version query (`styles.css?v=13`, `config.js?v=13`, `app.js?v=13`).
+When you change any of those files, bump the number in **every** HTML file so browsers
+and the CDN always fetch the fresh copy instead of a stale cached one.
